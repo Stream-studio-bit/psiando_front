@@ -38,7 +38,7 @@ export default defineConfig({
         manualChunks: {
           // Separar vendor chunks para melhor cache
           vendor: ['axios', 'date-fns', 'lodash'],
-          utils: ['src/utils/index.js'],
+          // Removido: utils (não existe a pasta)
           themes: ['src/themes/ThemeProvider.js']
         }
       }
