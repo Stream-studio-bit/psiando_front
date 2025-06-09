@@ -33,15 +33,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html')
-      },
-      output: {
-        manualChunks: {
-          // Separar vendor chunks para melhor cache
-          vendor: ['axios', 'date-fns', 'lodash'],
-          // Removido: utils (não existe a pasta)
-          themes: ['src/themes/ThemeProvider.js']
-        }
       }
+      // Removido output.manualChunks - deixar Vite otimizar automaticamente
     }
   },
   
@@ -85,6 +78,6 @@ export default defineConfig({
   
   // Otimizações
   optimizeDeps: {
-    include: ['axios', 'date-fns', 'lodash']
+    // Removido bibliotecas não instaladas
   }
 });
