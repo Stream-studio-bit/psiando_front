@@ -28,8 +28,8 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    sourcemap: true,
-    minify: 'terser',
+    sourcemap: false,
+    // Removido minify: 'terser' - usar padrão do Vite
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html')
@@ -58,7 +58,7 @@ export default defineConfig({
   
   // Configuração CSS
   css: {
-    postcss: './postcss.config.js',
+    // Removido postcss até verificar se existe
     devSourcemap: true
   },
   
